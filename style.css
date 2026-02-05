@@ -1,0 +1,150 @@
+:root {
+  --green: #2f9e44;
+  --green-soft: #e6f4ea;
+  --dark: #1f2933;
+  --gray: #6b7280;
+  --light: #f9fafb;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* ===== LAYOUT ===== */
+.cv-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== PROFILE PANEL ===== */
+.profile-panel {
+  width: 300px;
+  background: var(--green);
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.name span {
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.role {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.profile-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 2rem 0;
+}
+
+.profile-info {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.profile-info li {
+  margin-bottom: 0.8rem;
+}
+
+.profile-info i {
+  margin-right: 8px;
+}
+
+.panel-title {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.skill-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== CONTENT ===== */
+.content-panel {
+  flex: 1;
+  padding: 4rem 5rem;
+}
+
+.content-section {
+  max-width: 700px;
+  margin-bottom: 4rem;
+}
+
+.content-section h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.content-section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: var(--green);
+  margin-top: 8px;
+}
+
+.content-section p {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-item {
+  margin-bottom: 2.5rem;
+}
+
+.year {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-item h4 {
+  margin: 0.4rem 0;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .cv-layout {
+    flex-direction: column;
+  }
+
+  .profile-panel {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-panel {
+    padding: 3rem 2rem;
+  }
+}
